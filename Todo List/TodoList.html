@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <title>TODO List</title>
+    <style>
+
+        body {
+        background-color: #00edff;
+        }
+
+        input:hover{
+            box-shadow: 3px 2px #888888;
+        }
+        form:hover{
+            box-shadow: 5px 3px #0f0f0f;
+        }
+        select:hover{
+            box-shadow: 3px 2px #888888;
+        }
+
+    </style>
+  </head>
+  <body>
+    
+
+    <!-- Optional JavaScript; choose o  ne of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+   
+    <div class="container " style ="margin-top:3%;">
+    <form id = "User_detail_form" class="row g-3 my-4 " style = "background-color: white;padding :15px;" onsubmit="">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label" >Email</label>
+          <input required type="email" class="form-control" id="inputEmail" required>
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label">Name</label>
+          <input type="text" class="form-control" id="inputName">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label" >Address</label>
+          <input  type="text" class="form-control" id="inputAddress" placeholder="Chandigarh" required>
+        </div>
+      
+        <div class="col-md-4">
+          <label for="inputCity" class="form-label">City</label>
+          <input type="text" class="form-control" id="inputCity">
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">State</label>
+          <select id="inputState" class="form-select">
+            <option selected>Select State</option>
+            <option>UP</option>
+            <option>Punjab</option>
+            <option>Rajasthan</option>
+            <option>Karnataka</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <label for="inputZip" class="form-label">Pin</label>
+          <input type="text" class="form-control" id="inputZip">
+        </div>
+        <div class="col-12">
+          <button  type="button" class="btn btn-primary" onclick="process_form()">Add</button>
+        </div>
+      </form>
+    
+    </div>
+    <div class="container" style = "background-color: white;" >
+        <br> <button  type="button" class="btn btn-primary" onclick="PrintForm()">Print</button><br>
+        <div id ="UserDetailTable"></div>
+    </div>
+    
+
+    <script src = 'TodoList.js'></script>
+  </body>
+</html>
